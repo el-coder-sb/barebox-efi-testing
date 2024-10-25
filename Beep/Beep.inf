@@ -4,7 +4,7 @@
   FILE_GUID                      = 4ea87c51-7395-4dcd-0055-747010f3ce51
   MODULE_TYPE                    = UEFI_APPLICATION
   VERSION_STRING                 = 1.0
-  ENTRY_POINT                    = ShellCEntryLib
+  ENTRY_POINT                    = UefiMain
   VALID_ARCHITECTURES            = X64
 
 [Sources]
@@ -15,8 +15,9 @@
   ShellPkg/ShellPkg.dec
 
 [LibraryClasses]
-  ShellCEntryLib
-  ShellLib
+  # ShellCEntryLib
+  UefiApplicationEntryPoint
+  # ShellLib
   BaseLib
   BaseMemoryLib
   UefiLib
